@@ -17,7 +17,8 @@
   --transition: all 0.55s ease;
   --trans: translateY(-5px);
   --big-font: 5rem;
-  --p-font: 1rem;
+  --p-font: 1.5rem;
+  --h5-font: 0.9rem;
 }
 .grid {
   width: 1318px;
@@ -83,6 +84,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 8px;
 }
 .navbar li a:hover {
   cursor: pointer;
@@ -132,7 +134,7 @@ section {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(1, 2fr 1fr);
+  grid-template-columns: repeat(1, 3fr 2fr);
   align-items: center;
   gap: 1rem;
 }
@@ -143,6 +145,7 @@ section {
 }
 .content h3 {
   margin: 15px 0;
+  font-size: var(--p-font);
   color: var(--pink-color);
 }
 .text-p {
@@ -160,6 +163,10 @@ section {
 .pic-img {
   width: 450px;
   height: 450px;
+}
+.pic-img.iphone-img {
+  width: 400px;
+  height: 480px;
 }
 .product {
   display: grid;
@@ -182,11 +189,14 @@ section {
   color: var(--text-color);
 }
 .price {
-  margin: 10px 0;
+  margin: 20px 0;
+  font-size: var(--h5-font);
 }
 .price-old {
   color: var(--text-color);
   text-decoration: line-through;
+  color: rgb(80, 80, 80);
+  font-size: 0.7rem;
 }
 .box h5 {
   color: var(--gold-color);
@@ -210,5 +220,40 @@ body.color {
   --grey-color: #283140;
 }
 /* ----------------RESPONSIVE-------------- */
-@media (max-width: 1600px) {
+@media (max-width: 1470px) {
+  /* .pic-img {
+    width: 250px;
+    height: 250px;
+  } */
+  #main {
+  }
+}
+@media (max-width: 1400px) {
+  :root {
+    --big-font: 4.5rem;
+    --p-font: 1.5rem;
+  }
+  .pic-img {
+    width: 370px;
+    height: 400px;
+  }
+  .pic-img.iphone-img {
+    width: 340px;
+    height: 420px;
+  }
+}
+@media (max-width: 1400px) {
+  .pic-img {
+    width: 370px;
+    height: 400px;
+  }
+  .pic-img.iphone-img {
+    width: 330px;
+    height: 420px;
+  }
+}
+@media (max-width: 1280px) {
+  #main {
+    grid-template-columns: 1fr;
+  }
 }
